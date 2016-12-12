@@ -7,9 +7,28 @@
     "prepublishx": "babel --presets es2015 --out-dir dist src"
   },
   "dependencies": {
-    "babel-runtime": "^6.9.1"
+    "babel-runtime": "^6.9.1",
+    "inferno-compat": "1.0.0-beta9"
   },
   "devDependencies": {
-    "babel-helper-plugin-test-runner": "^6.3.13"
+    "babel-helper-plugin-test-runner": "^6.3.13",
+    "babel-plugin-module-resolver": "^2.4.0",
+    "babel-preset-es2015": "^6.18.0"
+  },
+  "babel": {
+    "plugins": [
+      [
+        "module-resolver",
+        {
+          "root": [
+            "."
+          ],
+          "alias": {
+            "react": "inferno-compat",
+            "react-dom": "inferno-compat"
+          }
+        }
+      ]
+    ]
   }
 }

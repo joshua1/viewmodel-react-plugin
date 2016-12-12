@@ -22,13 +22,10 @@ exports.default = function (_ref) {
         helper.addImportDeclaration('React', 'react');
         helper.addImportDeclaration('ViewModel', 'viewmodel-react');
 
-        var _helper$initialMethod = helper.initialMethodsAndProperties();
-
-        var _helper$initialMethod2 = _slicedToArray(_helper$initialMethod, 2);
-
-        var initialMethods = _helper$initialMethod2[0];
-        var initialProperties = _helper$initialMethod2[1];
-
+        var _helper$initialMethod = helper.initialMethodsAndProperties(),
+            _helper$initialMethod2 = _slicedToArray(_helper$initialMethod, 2),
+            initialMethods = _helper$initialMethod2[0],
+            initialProperties = _helper$initialMethod2[1];
 
         var componentName = path.node.callee.name;
         helper.prepareConstructor(componentName, initialMethods, initialProperties);
